@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Transcript Copier",
+  "version": "0.1.0",
+  "description": "Copy YouTube transcript line-by-line to clipboard.",
+  "permissions": ["activeTab", "clipboardWrite"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "action": {
+    "default_title": "Copy Transcript",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch*"],
+      "js": ["content.js"]
+    }
+  ]
+}

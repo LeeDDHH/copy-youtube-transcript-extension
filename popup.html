@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>YouTube Transcript Copier</title>
+    <style>
+      body { font-family: system-ui, -apple-system, sans-serif; margin: 12px; width: 360px; }
+      button { width: 100%; padding: 10px; font-size: 14px; cursor: pointer; }
+      .status { margin-top: 10px; font-size: 13px; white-space: pre-wrap; }
+      .error { color: #b00020; }
+      .ok { color: #0a7b34; }
+      details { margin-top: 10px; }
+      pre { background: #f6f6f6; padding: 8px; overflow: auto; }
+    </style>
+  </head>
+  <body>
+    <button id="copyBtn">Transcriptをコピー</button>
+    <div id="status" class="status"></div>
+
+    <details id="debugWrap" style="display:none;">
+      <summary>エラー詳細（デバッグ）</summary>
+      <pre id="debug"></pre>
+    </details>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
